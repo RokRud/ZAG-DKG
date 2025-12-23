@@ -1,0 +1,72 @@
+PRAGMATIC BLUEPRINT FOR ZAG DKG NETWORK SETUP
+
+1) Target Architecture
+- OriginTrail DKG layer + Paranet smart contracts
+- MetaMask authorization
+- SPARQL triple store (Blazegraph/GraphDB)
+- IPFS for document storage
+- API Gateway for JSON/GraphQL
+- Grafana for real-time dashboards
+- Vendor integrations: Instantel, NoiseGuard
+
+2) Paranet Design
+- Private Paranet for ZAG
+- Access policies: PERMISSIONED nodes/miners, STAGING submissions
+- Repositories: zag-core, zag-measurements, zag-docs
+- UAL structure for assets
+
+3) Identity & Authorization
+- MetaMask wallets for roles: Admin, Publisher, Viewer
+- Signing via EVM JSON-RPC
+
+4) Document Links
+- Store PDFs/reports on IPFS
+- Gateway URLs for access
+
+5) Data Acquisition
+- Instantel via THOR export/API
+- NoiseGuard via API integration
+
+6) Knowledge Asset Model (JSON-LD)
+- Use schema.org, PROV, SOSA/SSN vocabularies
+- Include device, measurement, distribution, provenance
+
+7) SPARQL Examples
+- Query latest PPV per device
+- Federated queries across paranet and public DKG
+
+8) Grafana Integration
+- Grafana Live (WebSockets) or JSON API plugin
+- Example datasource config for ZAG Measurements API
+
+9) Deployment Plan
+Phase 0: DKG node + triple store
+Phase 1: Identity & Gateways
+Phase 2: Document & asset pipeline
+Phase 3: Vendor data bridges
+Phase 4: Dashboards & SPARQL
+Phase 5: External sharing & curation
+
+10) Tech Stack
+- DKG Node (OriginTrail)
+- Blazegraph or GraphDB
+- IPFS node/gateway
+- Grafana OSS + JSON API plugin
+
+11) URL Structure
+- Devices: dkg://zag/paranet/devices/<device-id>
+- API: https://api.zag.si/measurements/<device-id>/latest
+- Documents: https://ipfs.io/ipfs/<CID>
+
+12) Governance & Operations
+- SHACL validation
+- Security: hardware wallets, role scoping
+- SLA/Monitoring via Grafana
+- Compliance: provenance, versioning
+
+13) Next Steps
+- Architecture diagram
+- Docker Compose starter bundle
+- Vendor bridges for Instantel & NoiseGuard
+- SPARQL repository & ontology
+- Playbook for operations

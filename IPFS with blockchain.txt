@@ -1,0 +1,161 @@
+1) High-Level Goals
+
+Confidentiality: Only authorized users can read file contents.
+Integrity & Provenance: Everyone can verify that a document or metadata hasn’t been tampered with and see who/what produced or modified it.
+Availability: Documents are pinned and retrievable, even if your origin nodes go offline.
+Revocation & Rotation: You can revoke access and rotate encryption keys without losing provenance history.
+
+
+2) Core Components
+
+
+Client App (Web / Mobile / CLI)
+
+Handles local encryption, signing, and uploads.
+Integrates MetaMask (or WalletConnect) to sign on-chain provenance transactions.
+
+
+
+Encryption & Key Management
+
+Envelope encryption: a symmetric Content Encryption Key (CEK) encrypts the file; CEK is then encrypted per recipient using their public keys.
+Recipient identities: DID (Decentralized Identifiers) or standard ECDSA wallet addresses.
+Optional KMS: Cloud KMS / self-hosted HSM for server-side key escrow or policy checks.
+
+
+
+IPFS Storage Layer
+
+Kubo (go-ipfs) nodes running on your infra.
+IPFS Cluster for automated pinning and replication.
+Private IPFS network (swarm key) for added network isolation, if needed.
+Optionally, Filecoin or pinning services to ensure long-term availability.
+
+
+
+Blockchain Layer (Ethereum / Polygon / …)
+
+Provenance Registry Smart Contract that:
+
+Records a document’s CID, hash (of plaintext or ciphertext, choose policy), timestamp, actor, operation (create/update/attest).
+Stores optional references to PROV-O metadata URIs (off-chain) and IPNS name for latest state.
+
+
+Optional Access Policy Contract (for auditability of grants/revocations; actual keys remain off-chain).
+
+
+
+Provenance Metadata (RDF/JSON-LD using PROV-O)
+
+Maintained off-chain (in your graph store or even on IPFS).
+Links entities, activities, agents, timestamps, tool versions, hashes, and chain tx references.
+
+
+
+Gateway & API
+
+Authenticated gateway (OAuth/JWT) to broker access if users don’t run IPFS locally.
+Policy engine to check who can receive the CEK and under what conditions.
+Audit service to aggregate on-chain events and off-chain logs.
+
+
+
+
+3) Data Flow (Create / Update / Access)
+A) Document Creation (Authoring & Publish)
+
+Author selects file → Client computes SHA-256(file) and encrypts:
+
+Generate random CEK (AES-GCM 256).
+ciphertext = AES-GCM(file, CEK, nonce)
+
+
+Upload to IPFS:
+
+Add ciphertext → receive CID (e.g., bafy...).
+Optionally publish a signed IPNS record pointing to the latest CID.
+
+
+Provenance anchoring (MetaMask):
+
+Call smart contract anchorDocument(hash, cid, opType) (opType = CREATE).
+Store txHash in off-chain PROV-O metadata.
+
+
+Key distribution:
+
+For each recipient R_i, obtain their public key, compute CEK_i = Encrypt(CEK, PK_i) (ECIES / X25519 + ChaCha20-Poly1305).
+Store encrypted CEKs as Access Grants (off-chain, e.g., in your graph DB or encrypted bundle on IPFS).
+
+
+Write PROV-O metadata (JSON-LD):
+
+prov:Entity for the document.
+prov:Activity for encryption & publish steps.
+prov:Agent for the author’s DID/address.
+Add blockchain txHash, CID, hash, timestamps, tool versions.
+Publish metadata to IPFS or your knowledge graph (and optionally link via IPNS).
+
+
+
+B) Document Update (New Version)
+
+Re-encrypt new version with new CEK (key rotation best practice).
+Add ciphertext to IPFS → new CID; update IPNS to point to latest.
+Call smart contract anchorDocument(newHash, newCid, opType=UPDATE).
+Distribute new CEK to authorized recipients; revoke old CEKs (see revocation below).
+Append PROV-O metadata with prov:wasDerivedFrom (old CID → new CID).
+
+C) Document Access (Recipient)
+
+Recipient resolves CID/IPNS, fetches ciphertext via:
+
+Local IPFS node, or
+Authenticated gateway (which does not decrypt—only serves bytes).
+
+
+Recipient obtains CEK_i (the CEK encrypted to them):
+
+Fetch from access grant store.
+Decrypt with their private key → CEK.
+
+
+Decrypt ciphertext locally → plaintext file.
+Verify integrity: recompute hash of plaintext and compare with on-chain record and metadata.
+
+
+4) Access Control Strategies
+Strategy 1: Encrypt-then-Publish (Default)
+
+Data is publicly fetchable via CID, but confidential because it’s encrypted.
+Only those with the right CEK can read it.
+Pros: simple, scalable; Cons: CID reveals existence but not content.
+
+Strategy 2: Private IPFS Network
+
+Use a swarm key so only your nodes can exchange blocks.
+Combine with encryption for defense-in-depth.
+Pros: network isolation; Cons: operational overhead.
+
+Strategy 3: Authenticated Gateway
+
+Users authenticate (OAuth/JWT). Gateway serves only allowed CIDs and may proxy from IPFS.
+Still do not decrypt at gateway; keep cryptography at the edge (client).
+Pros: enterprise-friendly policy checks, usage logging; Cons: gateway availability becomes a factor.
+
+
+5) Revocation & Rotation
+
+Per-recipient CEK wrapping enables revocation:
+
+Stop distributing CEK to a user; rotate CEK for future versions.
+Past versions remain accessible if the user cached CEK—this is normal for immutable systems.
+
+
+To effectively revoke access to old content:
+
+Publish an updated, re-encrypted version under a new CID/IPNS state.
+Policy engine stops serving that user’s CEK grants for any version.
+
+
+For highly sensitive content, store ciphertext only

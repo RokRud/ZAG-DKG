@@ -92,7 +92,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="Fxy4ih45k6ReDVehLtFc-32" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;strokeColor=#9673a6;shadow=1;fillColor=#e1d5e7;" value="&lt;p style=&quot;margin: 0px; margin-top: 4px; text-align: center; text-decoration: underline;&quot;&gt;&lt;b&gt;Neo4j solution (AI)&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;Client app&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;&amp;lt;PySide6&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;IPFS nodes and deamon&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;&amp;lt;Kubo&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" vertex="1">
-          <mxGeometry height="100" width="220" x="550" y="400" as="geometry" />
+          <mxGeometry height="100" width="220" x="550" y="420" as="geometry" />
         </mxCell>
         <mxCell id="Fxy4ih45k6ReDVehLtFc-35" edge="1" parent="1" source="25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=open;startFill=0;endArrow=open;endFill=0;exitX=0.01;exitY=0.681;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.993;entryY=0.325;entryDx=0;entryDy=0;entryPerimeter=0;" target="X2hJgh2lDzbIAg03fsi4-92">
           <mxGeometry relative="1" as="geometry">

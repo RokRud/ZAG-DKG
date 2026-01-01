@@ -130,6 +130,23 @@
             <mxPoint x="830" y="385" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="Fxy4ih45k6ReDVehLtFc-45" collapsed="1" parent="1" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;horizontal=0;horizontalStack=1;" value="Pro-Con" vertex="1">
+          <mxGeometry height="50" width="220" x="550" y="520" as="geometry">
+            <mxRectangle height="320" width="260" x="550" y="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fxy4ih45k6ReDVehLtFc-50" parent="Fxy4ih45k6ReDVehLtFc-45" style="swimlane;startSize=20;" value="Pro" vertex="1">
+          <mxGeometry height="320" width="120" x="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Fxy4ih45k6ReDVehLtFc-55" parent="Fxy4ih45k6ReDVehLtFc-50" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Working&lt;div&gt;Less development&lt;/div&gt;" vertex="1">
+          <mxGeometry height="220" width="120" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Fxy4ih45k6ReDVehLtFc-47" parent="Fxy4ih45k6ReDVehLtFc-45" style="swimlane;startSize=20;" value="Con" vertex="1">
+          <mxGeometry height="320" width="120" x="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Fxy4ih45k6ReDVehLtFc-53" parent="Fxy4ih45k6ReDVehLtFc-47" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Propriatory&lt;div&gt;Basic 65/GB/month&lt;/div&gt;" vertex="1">
+          <mxGeometry height="220" width="120" y="20" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

@@ -50,11 +50,14 @@
         <mxCell id="Cp6BGplNbw29cXqviNJT-123" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;strokeColor=#003366;shadow=1;fillColor=#D4E1F5;fontColor=#003366" value="&lt;p style=&quot;margin: 0px; margin-top: 4px; text-align: center; text-decoration: underline;&quot;&gt;&lt;b&gt;Measurement solutions&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;Wide range, each needs&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;API at&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 51, 102), rgb(161, 205, 249));&quot;&gt;least.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;&amp;lt;NoiseGuard&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;&amp;lt;Vision - Instantel&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;...&lt;/p&gt;" vertex="1">
           <mxGeometry height="120" width="160" x="340" y="320" as="geometry" />
         </mxCell>
-        <mxCell id="Cp6BGplNbw29cXqviNJT-125" edge="1" parent="1" source="25" style="endArrow=open;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.313;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="Cp6BGplNbw29cXqviNJT-123" value="">
+        <mxCell id="Cp6BGplNbw29cXqviNJT-125" edge="1" parent="1" style="endArrow=open;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.313;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" value="">
           <mxGeometry x="620" y="340" as="geometry">
-            <Array as="points" />
-            <mxPoint x="525" y="150" as="sourcePoint" />
-            <mxPoint x="400" y="258" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="419.96" y="280" />
+              <mxPoint x="399.96" y="280" />
+            </Array>
+            <mxPoint x="419.96" y="182.5" as="sourcePoint" />
+            <mxPoint x="400.0399999999999" y="320" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="X2hJgh2lDzbIAg03fsi4-92" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;strokeColor=#003366;shadow=1;fillColor=#D4E1F5;fontColor=#003366" value="&lt;p style=&quot;margin: 0px; margin-top: 4px; text-align: center; text-decoration: underline;&quot;&gt;&lt;b&gt;Database&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;BlockChain&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;Overall ledger of all links&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;in framework&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;&amp;lt;Sparql&amp;gt;&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 51, 102), rgb(161, 205, 249));&quot;&gt;or &amp;lt;Cypher and GQL&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;Needs history&lt;/p&gt;" vertex="1">
@@ -65,7 +68,10 @@
         </mxCell>
         <mxCell id="X2hJgh2lDzbIAg03fsi4-96" edge="1" parent="1" source="25" style="endArrow=open;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;exitX=0.217;exitY=1.011;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;" target="Cp6BGplNbw29cXqviNJT-118" value="">
           <mxGeometry x="620" y="340" as="geometry">
-            <Array as="points" />
+            <Array as="points">
+              <mxPoint x="353" y="210" />
+              <mxPoint x="220" y="210" />
+            </Array>
             <mxPoint x="385" y="200" as="sourcePoint" />
             <mxPoint x="370" y="340" as="targetPoint" />
           </mxGeometry>
@@ -146,6 +152,20 @@
         </mxCell>
         <mxCell id="Fxy4ih45k6ReDVehLtFc-53" parent="Fxy4ih45k6ReDVehLtFc-47" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Propriatory&lt;div&gt;Basic 65/GB/month&lt;/div&gt;" vertex="1">
           <mxGeometry height="220" width="120" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Fxy4ih45k6ReDVehLtFc-59" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Legend" vertex="1">
+          <mxGeometry height="240" width="280" x="870" y="-130" as="geometry">
+            <mxRectangle height="30" width="80" x="870" y="-130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fxy4ih45k6ReDVehLtFc-57" parent="Fxy4ih45k6ReDVehLtFc-59" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;strokeColor=#d79b00;shadow=1;fillColor=#ffe6cc;" value="&lt;p style=&quot;margin: 0px; margin-top: 4px; text-align: center; text-decoration: underline;&quot;&gt;&lt;b&gt;Open questions&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 51, 102), rgb(161, 205, 249));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="60" width="160" x="20" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="Fxy4ih45k6ReDVehLtFc-58" parent="Fxy4ih45k6ReDVehLtFc-59" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;strokeColor=#9673a6;shadow=1;fillColor=#e1d5e7;" value="&lt;p style=&quot;margin: 0px; margin-top: 4px; text-align: center; text-decoration: underline;&quot;&gt;&lt;b&gt;Partial Solutions&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="60" width="160" x="20" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Fxy4ih45k6ReDVehLtFc-56" parent="Fxy4ih45k6ReDVehLtFc-59" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;strokeColor=#003366;shadow=1;fillColor=#D4E1F5;fontColor=#003366" value="&lt;p style=&quot;margin: 0px; margin-top: 4px; text-align: center; text-decoration: underline;&quot;&gt;&lt;b&gt;DKG&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 51, 102), rgb(161, 205, 249));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="60" width="160" x="20" y="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

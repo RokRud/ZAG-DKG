@@ -167,6 +167,43 @@
         <mxCell id="Fxy4ih45k6ReDVehLtFc-56" parent="Fxy4ih45k6ReDVehLtFc-59" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;strokeColor=#003366;shadow=1;fillColor=#D4E1F5;fontColor=#003366" value="&lt;p style=&quot;margin: 0px; margin-top: 4px; text-align: center; text-decoration: underline;&quot;&gt;&lt;b&gt;DKG&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 51, 102), rgb(161, 205, 249));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;" vertex="1">
           <mxGeometry height="60" width="160" x="20" y="30" as="geometry" />
         </mxCell>
+        <mxCell id="Fxy4ih45k6ReDVehLtFc-60" edge="1" parent="Fxy4ih45k6ReDVehLtFc-59" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="190" y="90" as="sourcePoint" />
+            <mxPoint x="270" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fxy4ih45k6ReDVehLtFc-61" connectable="0" parent="Fxy4ih45k6ReDVehLtFc-60" style="edgeLabel;html=1;align=center;verticalAlign=top;resizable=0;points=[];labelPosition=center;verticalLabelPosition=bottom;" value="Follows" vertex="1">
+          <mxGeometry relative="1" x="0.0167" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fxy4ih45k6ReDVehLtFc-62" edge="1" parent="Fxy4ih45k6ReDVehLtFc-59" style="endArrow=open;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;convertToSvg=1;" value="">
+          <mxGeometry x="-250" y="470" as="geometry">
+            <Array as="points">
+              <mxPoint x="190" y="50" />
+              <mxPoint x="190" y="50" />
+            </Array>
+            <mxPoint x="270" y="50" as="sourcePoint" />
+            <mxPoint x="190" y="50" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fxy4ih45k6ReDVehLtFc-63" connectable="0" parent="Fxy4ih45k6ReDVehLtFc-62" style="edgeLabel;html=1;align=center;verticalAlign=top;resizable=0;points=[];labelPosition=center;verticalLabelPosition=bottom;" value="Dependand" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fxy4ih45k6ReDVehLtFc-66" edge="1" parent="Fxy4ih45k6ReDVehLtFc-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;spacingBottom=3;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="129" as="sourcePoint" />
+            <mxPoint x="190" y="129" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fxy4ih45k6ReDVehLtFc-67" connectable="0" parent="Fxy4ih45k6ReDVehLtFc-66" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Feeds" vertex="1">
+          <mxGeometry relative="1" x="-0.0167" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
